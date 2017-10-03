@@ -1,18 +1,20 @@
 #!/bin/bash
 
-#comando 
+#comando para atualizar o sistema
 echo "####################################################################"
 echo "#                    Atualização do Ambiente...                    #"
 echo "####################################################################"
 
 sudo apt update && sudo apt upgrade -y
 
+#comando para instalar programas necessários
 echo "####################################################################"
 echo "#               Instalação de Programas Essenciais...              #"
 echo "####################################################################"
 
 sudo apt install -y git wget
 
+#comandos para instalar a versão LTS do NodeJS e a biblioteca pedida
 echo "####################################################################"
 echo "#          Instalação do NodeJS e Biblioteca Necessária...         #"
 echo "####################################################################"
