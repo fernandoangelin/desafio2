@@ -35,3 +35,13 @@ sudo ln -s node-v6.11.3-linux-x64 current
 
 #criar o link para o binário atual
 sudo ln -s /opt/nodejs/current/bin/node /bin/node
+
+#instalação do NPM
+sudo apt install npm
+
+cd /opt/nodejs
+
+#instalação da Biblioteca Express
+sudo npm install express --save
+
+cd
