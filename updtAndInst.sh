@@ -12,36 +12,21 @@ echo "####################################################################"
 echo "#               Instalação de Programas Essenciais...              #"
 echo "####################################################################"
 
-sudo apt install -y git wget
+sudo apt install -y git wget curl
 
 #comandos para instalar a versão LTS do NodeJS e a biblioteca pedida
 echo "####################################################################"
 echo "#          Instalação do NodeJS e Biblioteca Necessária...         #"
 echo "####################################################################"
 
-#criar a pasta para o nodeJS no /opt/
-sudo mkdir -p /opt/nodejs
+#baixar a versão LTS do NodeJS
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
-#baixar a versão LTS
-wget https://nodejs.org/dist/v6.11.3/node-v6.11.3-linux-x64.tar.xz
+#instala o node baixado
+sudo apt-get install -y nodejs
 
-#descompactar e mover o nodeJS para /opt/
-sudo tar -Jxf node-v6.11.3-linux-x64.tar.xz -C /opt/nodejs/
-
-#remover arquivo baixado
-rm node-v6.11.3-linux-x64.tar.xz
-
-#criar o link para para a versão atual
-cd /opt/nodejs
-sudo ln -s node-v6.11.3-linux-x64 current
-
-#criar o link para o binário atual
-sudo ln -s /opt/nodejs/current/bin/node /bin/node
-
-#instalação do NPM
-sudo apt install npm
-
-cd /opt/nodejs
+#caso precise de outras bibliotecas
+sudo apt-get install -y build-essential
 
 #instalação da Biblioteca Express
 sudo npm install express --save
