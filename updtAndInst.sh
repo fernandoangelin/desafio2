@@ -12,7 +12,7 @@ echo "####################################################################"
 echo "#               Instalação de Programas Essenciais...              #"
 echo "####################################################################"
 
-sudo apt install -y git wget curl
+sudo apt install -y curl
 
 #comandos para instalar a versão LTS do NodeJS e a biblioteca pedida
 echo "####################################################################"
@@ -28,7 +28,7 @@ sudo apt-get install -y nodejs
 #caso precise de outras bibliotecas
 sudo apt-get install -y build-essential
 
+cd /desafio2/myApplication
+
 #instalação da Biblioteca Express
 sudo npm install express --save
-
-cd
