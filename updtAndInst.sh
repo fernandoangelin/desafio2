@@ -28,9 +28,12 @@ sudo apt-get install -y nodejs
 #caso precise de outras bibliotecas
 sudo apt-get install -y build-essential
 
-cd /desafio2/myApplication
+cd /myApplication
 
 #instalação da Biblioteca Express
 sudo npm install express --save
 
 node index.js &
+
+clear
+clear
