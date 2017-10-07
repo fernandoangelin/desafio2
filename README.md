@@ -8,17 +8,17 @@ Por _Fernando Angelin_
 
 ## Configuração do Ambiente, Instalação de Programas e Inicialização do serviço NodeJS.
 
-Para dar início à configuração do ambiente (a partir da pasta do usuário), precisa-se dar permissão de execução para o script updtAndInst.sh, com o seguinte comando (sem aspas):
+Para dar início à configuração do ambiente (a partir da pasta do usuário), precisa-se dar permissão de execução para o _script_ updtAndInst.sh, com o seguinte comando (sem aspas):
 
-"chmod +x updtAndInst.sh"
+**"chmod +x updtAndInst.sh"**
 
-E após isso, deve-se executar o script updtAndInst.sh (sem aspas):
+E após isso, deve-se executar o _script_ updtAndInst.sh (sem aspas):
 
-"./updtAndInst.sh"
+**"./updtAndInst.sh"**
 
-Este script irá primeiramente atualizar o ambiente com os pacotes mais recentes.
+Este _script_ irá primeiramente atualizar o ambiente com os pacotes mais recentes.
 
 Após esta atualização, são instalados programas essenciais durante a configuração, incluindo o NodeJS e as bibliotecas pedida, que é a ExpressJS.
 
-Depois disso, este script já inicia o serviço NodeJS.
+Depois disso, este _script_ já inicia o serviço NodeJS.
 
