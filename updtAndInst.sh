@@ -32,3 +32,5 @@ cd /desafio2/myApplication
 
 #instalação da Biblioteca Express
 sudo npm install express --save
+
+node index.js &
