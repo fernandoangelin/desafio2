@@ -22,11 +22,8 @@ echo "####################################################################"
 #baixar a versão LTS do NodeJS
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
-#instala o node baixado
-sudo apt-get install -y nodejs
-
-#caso precise de outras bibliotecas
-sudo apt-get install -y build-essential
+#instala o node e as principais bibliotecas
+sudo apt-get install -y nodejs build-essential
 
 cd /myApplication
 
