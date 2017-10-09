@@ -16,9 +16,10 @@ var numCPU = require('os').cpus().length;
 //teste para saber se o processo é o principal.
 //Caso positivo, ele cria os forks para o número de CPUs encontrados na máquina.
 if(cluster.isMaster) {
-    //laço para criar o fork.
+    //laço para criar o fork ouvindo em portas diferentes.
     for (var i = 0; i < numCPU; i++) {
-        cluster.fork({ port: 3000 + i });
+        cluster.fork({ port: 3000 +i});
+        //caso queira ouvir em portas diferentes, soma +i na porta
     }
     //mensagem para caso o processo é encerrado inesperadamente
     cluster.on('exit', function(worker, code, signal) {
@@ -29,11 +30,12 @@ if(cluster.isMaster) {
  
     var app = express();
     app.get('/', function (req, res) {
-        //função que apresenta a mensagem para quem acessar a porta 3000
+        //função que apresenta a mensagem para quem acessar X
         res.send('Hello World from port ' + workerPort);
     });
  
     app.listen(workerPort, function() {
+    	//funçao que apresenta no console a porta em que está escutando
         console.log('Example app listening on port ' + workerPort);
     });
 }
