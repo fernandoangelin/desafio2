@@ -37,10 +37,3 @@ app.get('/', function (req, res) {
 app.listen(3000, function () {
 	console.log('Example app listening on port 3000!');
 });
-
-//funão que cria um servidor http na porta 8000
-http.Server(function(req, res) {
-	res.writeHead(200);
-	res.end("Hello World!\n");
-	console.log('Connection received on port 8000!');
-}).listen(8000);
