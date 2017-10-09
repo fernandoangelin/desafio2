@@ -30,6 +30,10 @@ cd /myApplication
 #instalação da Biblioteca Express
 sudo npm install express --save
 
+#instalação da http proxy
+sudo npm install --save express http-proxy
+
+#rodar em background o serviço criado.
 node index.js &
 
 clear
