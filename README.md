@@ -34,7 +34,7 @@ Utilizando a biblioteca cluster, o algoritmo padrão de balanceamento de carga �
 
 Este _script_ cria um serviço de proxy reverso onde ele direciona o acesso para o serviço instanciado no _script_ anterior.
 
-O balanceamento de carga padrão atua para o balancemanto de carga nos CPUs e threads disponíveis.
+O balanceamento de carga implementado foi um round robin para os links disponiveis, conforme o número de processadores da máquina.
 
 ### Tentativa realizada
 
