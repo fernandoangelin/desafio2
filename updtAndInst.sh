@@ -41,7 +41,7 @@ npm install pm2@latest -g
 node index.js &
 
 #rodar o proxy também em background..
-node proxy.js &
+pm2 start proxy.js &
 
 clear
 clear
