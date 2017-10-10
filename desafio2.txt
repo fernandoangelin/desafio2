@@ -1,0 +1,43 @@
+Olá Fernando, tudo bem?
+ 
+Se você chegou até aqui, é porque acreditamos que estejas preparado para próxima etapa no nosso processo seletivo! 
+Gostamos muito do se primeiro desafio, e agora antes da entrevista técnica, temos um segundo desafio.
+
+Essa atividade prática envolve a configuração de uma máquina virtual linux com o sistema Ubuntu 16.04 LTS.
+ 
+Você tem 05 dias para realizar esse desafio, mas se precisar de mais um pouco de tempo é só avisar, pode ser?
+ 
+______
+ 
+DESAFIO
+ 
+O ambiente deve ser todo configurado através de gerenciador de configuração, o que deverá ser entregue é um repositório git contendo os arquivos de configuração que serão aplicados em uma máquina virtual "zerada". Caso necessário descrever como executar o processo de aplicação da configuração na máquina virtual. Ao final da tarefa e execução do processo, deveremos ter um ambiente funcional;
+ 
+- É recomendado que o repositório git seja entregue com commits pariciais, mostrando a evolução de seu código e pensamento. Caso prefira nos informe um url de git público ou então compacte todos os arquivos em um .tar.gz mantendo a pasta .git em conjunto;
+ 
+- No ambiente deverá estar rodando uma aplicação node.js de exemplo, conforme código abaixo. A versão do node.js deverá ser a última versão LTS disponível em: https://nodejs.org/en/download/. A aplicação node abaixo possui a dependência da biblioteca express. Garanta que seu processo de bootstrap instale essa dependência ( última versão estável disponível em: http://expressjs.com/ ) e rode o processo node em background. De uma forma dinâmica garanta que seja criado uma instância node para cada processador existente na máquina ( a máquina poderá ter de 1 a 32 processadores );
+var express = require('express');
+var app = express();
+ 
+app.get('/', function (req, res) {
+res.send('Hello World!');
+});
+ 
+app.listen(3000, function () {
+console.log('Example app listening on port 3000!');
+});
+ 
+- Construa dentro de sua automação um processo de deploy e rollback seguro e rápido da aplicação node. O deploy e rollback deverá garantir a instalação das dependências node novas (caso sejam adicionadas ou alteradas a versão de algum dependência por exemplo), deverá salvar a versão antiga para possível rollback e reiniciar todos processos node sem afetar a disponibilidade global da aplicação na máquina;
+ 
+- A aplicação Node deverá ser acessado através de um Servidor Web configurado como Proxy Reverso e que deverá intermediar as conexões HTTP e HTTPS com os clientes e processos node. Um algoritmo de balanceamento deve ser configurado para distribuir entre os N processos node a carga recebida;
+ 
+- A fim de garantir a disponibilidade do serviço, deverá estar funcional uma monitoração do processo Node e Web para caso de falha, o mesmo deve reiniciar ou subir novamente os serviços em caso de anomalia;
+ 
+- Desenvolva um pequeno script que rode um teste de carga e demostre qual o Throughput máximo que seu servidor consegue atingir;
+ 
+- Desenvolva um script que parseie o log de acesso do servidor Web e deverá rodar diariamente e enviar por e-mail um simples relatório, com a frequência das requisições e o respectivo código de resposta (ex:5 /index.html 200);
+ 
+- Por fim; rode o seu parser de log para os logs gerados pelo teste de carga, garantindo que seu script terá perfomance mesmo em casos de logs com milhares de acessos;
+ 
+Boa sorte e bons códigos. :)
+Vanessa 
