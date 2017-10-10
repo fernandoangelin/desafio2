@@ -43,3 +43,11 @@ Ouve uma tentativa onde eram criados forks dos serviços em _index.js_ onde os s
 Porém, em _proxy.js_ não havia balanceamento de carga, sendo que todas as requisições eram enviadas para o último localhost criado.
 
 Então deixei por conta do sistema o balanceamento de processos, já que os forks são feitos em cluster.
+
+## Teste de conexão
+
+Executar o _script_ test.js da seguinte maneira:
+
+node test.js
+
+Ele faz requests para a porta 8000. esta direciona para a porta 3000 e diz qual worker recebeu a conexão.
