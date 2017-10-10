@@ -17,11 +17,15 @@ var i;
 //porta inicial definida no index.js
 porta=3000;
 
-link = ('http://localhost:'+porta).toString();
+for (i=0; i<numCPU; i++){
+	servers[i]  = ('http://localhost:'+(porta)).toString();
+	//porta+i cria para portas diferentes. deixei para apenas uma porta.
 
-app.all('/', function(req, res) {
-		console.log('Redirecionamento ativado!');
-		apiProxy.web(req, res, {target: link});
-});
+	link = servers[i];
 
+	app.all('/', function(req, res) {
+			console.log('Redirecionamento ativado!');
+			apiProxy.web(req, res, {target: link});
+	});
+}
 app.listen(8000);
