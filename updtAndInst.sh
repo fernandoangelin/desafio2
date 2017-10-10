@@ -34,7 +34,7 @@ sudo npm install express --save
 sudo npm install --save express http-proxy
 
 #instalação da pm2
-sudo npm install pm2@latest -g
+npm install pm2@latest -g
 
 #rodar com node ou pm2??
 #rodar em background o serviço criado.
