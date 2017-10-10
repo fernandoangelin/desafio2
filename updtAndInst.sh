@@ -23,9 +23,9 @@ echo "####################################################################"
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 #instala o node e as principais bibliotecas
-sudo apt-get install -y nodejs build-essential
+sudo apt install -y nodejs build-essential
 
-cd /myApplication
+cd myApplication/
 
 #instalação da Biblioteca Express
 sudo npm install express --save
@@ -45,3 +45,5 @@ pm2 start proxy.js
 
 clear
 clear
+
+echo ('PROCESSOS RODANDO')
