@@ -36,6 +36,9 @@ sudo npm install --save express http-proxy
 #instalação da pm2
 sudo npm install pm2@latest -g
 
+#instalação request para testar carga
+sudo npm install request
+
 #rodar com node ou pm2??
 #rodar em background o serviço criado.
 pm2 start index.js &
