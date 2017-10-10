@@ -15,18 +15,13 @@ var servers = new Array();
 var i;
 
 //porta inicial definida no index.js
-port=3000
-//criar as localhosts
-for(i=0;i<numCPU;i++){
-	//gerar a string para ser passada como parâmetro
-	(servers[i] = 'http://localhost:'+(port+i)).toString();
-	console.log(servers[i]);
-	temp = servers[i];
-	app.all('/', function(req, res) {
-	console.log('Redirecting to Server'+i);
-	apiProxy.web(req, res, {target: temp});
-	//LOCALBASEADO NO BALANCEADOR DE CARGA
+porta=3000;
+
+link = ('http://localhost:'+porta).toString();
+
+app.all('/', function(req, res) {
+		console.log('Redirecionando para o serviço pedido...');
+		apiProxy.web(req, res, {target: link});
 });
-}
 
 app.listen(8000);
