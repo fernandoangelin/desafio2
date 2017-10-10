@@ -10,11 +10,11 @@ Por _Fernando Angelin_
 
 Por favor, clone o repositório para a pasta do usuário atual.
 
-Para dar início à configuração do ambiente (a partir da pasta do usuário), precisa-se dar permissão de execução para o _script_ updtAndInst.sh, com o seguinte comando (sem aspas):
+Para dar início à configuração do ambiente (a partir da pasta do usuário), caso precise dar permissão de execução para o _script_ updtAndInst.sh, com o seguinte comando (sem aspas):
 
 **"chmod +x updtAndInst.sh"**
 
-E após isso, deve-se executar o _script_ updtAndInst.sh (sem aspas):
+Se não precisar, deve-se executar o _script_ updtAndInst.sh (sem aspas):
 
 **"./updtAndInst.sh"**
 
@@ -22,7 +22,7 @@ Este _script_ irá primeiramente atualizar o ambiente com os pacotes mais recent
 
 Após esta atualização, são instalados programas essenciais durante a configuração, incluindo o NodeJS e as bibliotecas pedida, que é a ExpressJS.
 
-Depois disso, este _script_ já inicia o serviço NodeJS e o Proxy reverso.
+Depois disso, este _script_ já inicia o serviço NodeJS e o Proxy reverso, utilisando um gerenciador de processo chamado PM2. Com ele é possível analisar os processos por ele gerido.
 
 ### index.js
 
