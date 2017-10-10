@@ -20,7 +20,7 @@ if(cluster.isMaster) {
 	console.log('Processo Master rodando...')
     //laço para criar o fork ouvindo em portas diferentes.
     for (let i = 0; i < numCPUs; i++) {
-        cluster.fork({ port: porta});
+        cluster.fork({ port: porta+i});
         //caso queira ouvir em portas diferentes, soma +i na porta
     }
     //mensagem para caso o processo é encerrado inesperadamente
