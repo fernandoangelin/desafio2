@@ -39,10 +39,11 @@ if(cluster.isMaster) {
     app.get('/', function (req, res) {
         //função que apresenta a mensagem para quem acessar X
         res.send('Hello World da porta ' + portaWorker + ' e do Worker' + cluster.worker.id);
+        console.log('Hello World da porta ' + portaWorker + ' e do Worker' + cluster.worker.id);
     });
  
     app.listen(portaWorker, function() {
     	//funçao que apresenta no console a porta em que está escutando
-        console.log('APP exemplo listening na porta ' + portaWorker + ' e no Worker ' + cluster.worker.id);
+        console.log('APP exemplo listening na porta ' + portaWorker + ' e no Worker' + cluster.worker.id);
     });
 }
