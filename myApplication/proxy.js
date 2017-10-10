@@ -20,7 +20,7 @@ porta=3000;
 link = ('http://localhost:'+porta).toString();
 
 app.all('/', function(req, res) {
-		console.log('Redirecionando para o serviço pedido...');
+		console.log('Redirecionamento ativado!');
 		apiProxy.web(req, res, {target: link});
 });
 
