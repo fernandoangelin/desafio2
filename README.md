@@ -22,7 +22,7 @@ Este _script_ irá primeiramente atualizar o ambiente com os pacotes mais recent
 
 Após esta atualização, são instalados programas essenciais durante a configuração, incluindo o NodeJS e as bibliotecas pedida, que é a ExpressJS.
 
-Depois disso, este _script_ já inicia o serviço NodeJS e o Proxy reverso, utilisando um gerenciador de processo chamado PM2. Com ele é possível analisar os processos por ele gerido.
+Depois disso, este _script_ já inicia o serviço NodeJS e o Proxy reverso.
 
 ### index.js
 
