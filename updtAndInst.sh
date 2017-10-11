@@ -16,7 +16,7 @@ sudo apt install -y curl
 
 #comandos para instalar a versão LTS do NodeJS e a biblioteca pedida
 echo "####################################################################"
-echo "#          Instalação do NodeJS e Biblioteca Necessária...         #"
+echo "#         Instalação do NodeJS e Bibliotecas Necessárias...        #"
 echo "####################################################################"
 
 #baixar a versão LTS do NodeJS
@@ -34,16 +34,17 @@ sudo npm install express --save
 sudo npm install --save express http-proxy
 
 #instalação da pm2
-sudo npm install pm2@latest -g
+sudo npm install pm2@latest -g --save
 
 #instalação request para testar carga
-sudo npm install request
+sudo npm install request --save
 
-#rodar com node ou pm2??
-#rodar em background o serviço criado.
+#rodar em background com o PM2 o serviço criado.
 pm2 start index.js
 
 #rodar o proxy também em background..
 pm2 start proxy.js
 
-echo ("PROCESSOS RODANDO")
+echo "####################################################################"
+echo "#                   Tudo instalado e executando...                 #"
+echo "####################################################################"
