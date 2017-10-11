@@ -6,7 +6,9 @@
   "dependencies": {
     "express": "^4.16.2",
     "http-proxy": "^1.16.2",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
   },
   "devDependencies": {},
   "scripts": {
