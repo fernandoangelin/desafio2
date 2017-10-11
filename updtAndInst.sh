@@ -39,6 +39,10 @@ sudo npm install pm2@latest -g --save
 #instalação request para testar carga
 sudo npm install request --save
 
+#instalar o winston e outra biblioteca adicional
+sudo npm install winston@2.4.0 --save
+sudo npm install --save winston-daily-rotate-file
+
 #rodar em background com o PM2 o serviço criado.
 pm2 start index.js
 
