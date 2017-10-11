@@ -71,10 +71,5 @@ Ele faz requests para a porta 8000. esta direciona para a porta 3000 e diz qual 
 
 [:'( ] Parser de log para os logs gerados pelo teste de carga, garantindo que o script terá performance mesmo em logs gigantescos. Ainda não.
 
-
-
-
-
-
-
-
+PS: Consegui capturar logs da execução, mas não está muito bonito..
+Este código eu coloquei no final de index e proxy (não na versão comitada), trocando apenas o nome do arquivo. Vou comitá-lo separado.
