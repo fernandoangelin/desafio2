@@ -25,9 +25,11 @@ for (i=0; i<numCPU; i++){
 	console.log(addresses[i]);
 
 	app.all('/', function(req, res) {
-			console.log('Redirecionamento ativado!');
 			//implementa um round robin para o balanceamento para links e portas diferentes
 			link=addresses.shift();
+
+			console.log('Redirecionamento ativado para '+link);
+						
 			apiProxy.web(req, res, {target: link});
 			addresses.push(link);
 	});
