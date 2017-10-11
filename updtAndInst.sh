@@ -41,12 +41,9 @@ sudo npm install request
 
 #rodar com node ou pm2??
 #rodar em background o serviço criado.
-pm2 start index.js &
+pm2 start index.js
 
 #rodar o proxy também em background..
-pm2 start proxy.js &
-
-clear
-clear
+pm2 start proxy.js
 
 echo ("PROCESSOS RODANDO")
