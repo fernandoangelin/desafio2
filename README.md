@@ -51,3 +51,30 @@ Executar o _script_ test.js da seguinte maneira:
 node test.js
 
 Ele faz requests para a porta 8000. esta direciona para a porta 3000 e diz qual worker recebeu a conexão.
+
+# CheckBox
+[ X ] Script para Instalação das dependências (NodeJS LTS, ExpressJS...) e inicialização dos serviços.
+
+[ X ] Index que instancia os serviços NodeJS de forma dinâmica aos números de CPUs e Threads, em portas diferentes, começando na 3000 somando o número de CPU - 1, ex: no caso de quatro CPUs as portas 3000, 3001, 3002 e 3003 serão ocupadas.
+
+[:'( ] Deploy e rollback ainda não.
+
+[ X ] Proxy Reverso que ouve na porta 8000 e redireciona para as portas dos serviços NodeJS instanciados anteriormente, partindo da porta 3000 somando o número de CPUs - 1, vide exemplo anterior. Por enquanto apenas HTTP.
+
+[ X ] Balanceamento de carga implementado em proxy.js. Seu funcionamento é igual ao _Round-Robin_.
+
+[:'( ] Monitoramento dos serviços Node e Web (são lançados apenas pelo PM2), mas ainda não.
+
+[ :| ] Teste utilizando requests para acessar o proxy e saber qual worker está lidando com a conexão. Ainda sem throughput máximo que o sistema consegue aguentar.
+
+[:'( ] Script que parseia o log de acesso do serviço web rodar diariamente e enviar por email um simples relatório, com frequência de requisições e o respectivo código de resposta (ex:5 /index.html 200).. Ainda não.
+
+[:'( ] Parser de log para os logs gerados pelo teste de carga, garantindo que o script terá performance mesmo em logs gigantescos. Ainda não.
+
+
+
+
+
+
+
+
