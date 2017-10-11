@@ -16,7 +16,7 @@ Para dar início à configuração do ambiente (a partir da pasta do usuário), 
 
 Se não precisar, deve-se executar o _script_ updtAndInst.sh (sem aspas):
 
-**"./updtAndInst.sh"**
+**"sudo ./updtAndInst.sh"**
 
 Este _script_ irá primeiramente atualizar o ambiente com os pacotes mais recentes.
 
